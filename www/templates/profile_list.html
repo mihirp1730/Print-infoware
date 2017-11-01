@@ -1,0 +1,30 @@
+<ion-view view-title="Manage Users" ng-init="GetUsers()">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-ios-plus" ng-click="add_new_user()" style="background: transparent;"></button>
+    </ion-nav-buttons>
+
+    <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+        <div class="tabs">
+            <a class="tab-item active" nav-transition="none" href="#">
+                            Users
+                        </a>
+            <a class="tab-item" nav-transition="none" href="#app/admin_profile_list">
+                            Admin
+                        </a>
+        </div>
+    </div>
+
+    <ion-content padding="true" style="color: #000;">
+        <br><br><br>
+
+        <ion-list can-swipe="true">
+            <ion-item ng-repeat="data in userlist" class="item-thumbnail-left item-text-wrap" style="border-color: Transperent">
+                <div class="card" ng-if="data.UserId.UserRole.Name=='User'">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;{{data.FirstName}}</p>
+                    <p><b>&nbsp;&nbsp;&nbsp;&nbsp;{{data.Email}}</b></p>
+                    <ion-option-button class="button-assertive ion-trash-a" ng-click="showConfirm(data.UserId.Id)">
+                    </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

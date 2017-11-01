@@ -1,0 +1,66 @@
+<ion-view view-title="Profile" cache-view="false" ng-init="GetAllProfile()">
+ 
+     <!--<ion-nav-buttons side="right">
+        <i class="ion-plus" ng-click="add_new_category()" style="float: right; color:blue; width:31px; font-size: 34px;"></i>
+         <button class="button button-icon ion-ios-bell" ng-controller="AppCtrl" ng-click="a_notification()" style="background: transparent;"></button>
+     </ion-nav-buttons>-->
+         
+     <ion-content padding="true"  style="color: #000;">
+    
+            <div >
+                
+                 <!--<ul class="list">-->
+             
+
+                <div class="card">
+                    
+                    <!--<li class="item"  style="border-bottom-color:rgba(229, 229, 229, 0.66);">
+                    <p style="color:#000;">First Name</p>
+                    <p style="color:rgba(68, 68, 68, 0.84);">{{profile.ContactId.FirstName}}</p>
+                    </li>-->
+                    &nbsp;&nbsp;&nbsp; {{profile.ContactId.FirstName}} {{profile.ContactId.LastName}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.ContactId.Email}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.ContactId.Phone}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.ContactId.Mobile}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.AddressId.Street1}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.AddressId.Street2}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.AddressId.City}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.AddressId.State}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.AddressId.Country}}
+                </div>
+
+                <div class="card">
+                    &nbsp;&nbsp;&nbsp; {{profile.AddressId.PinCode}}
+                </div>            
+           
+                
+                    <button class="button button-block button-positive" ng-click="user_detail(profile.Id)">
+                        Edit Profile
+                    </button>
+        </div>
+    </ion-content>
+</ion-view>

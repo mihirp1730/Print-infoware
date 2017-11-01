@@ -1,0 +1,44 @@
+<ion-view view-title="Dashboard" name="Dashboard-Admin">
+    
+    <!-- <ion-nav-bar class="bar-stable">
+
+    </ion-nav-bar>  -->
+   
+    <!-- <ion-nav-buttons side="right">
+        <i class="ion-android-notifications header-badge" ng-click="notificationadmin()" style="float: right; color:#333; width:30px; margin-top: -5px; font-size: 34px;">
+               <span style="font-size: 11px; margin-top: -26px; color:red;margin-left: 6.5px;">
+                {{statusnum+completedprogressss+followupnum}}
+               </span>
+        </i>  
+    </ion-nav-buttons> -->
+    <ion-content class="has-header">
+        <form>
+            <div class="list card" ng-repeat="data in JobRequest track by $index">
+                <div class="item" style="background-color: cadetblue;">
+                    <p ng-show="sss">{{data.Id}}</p> 
+                    <h4>{{data.RequestedBy.ContactId.FirstName}}&nbsp;{{data.RequestedBy.ContactId.LastName}}
+                    </h4>
+
+                    <h4>{{data.ArticleId.Name}}</h4>
+                    <h4>Amount:{{data.ArticleId.Amount}}</h4>
+                    <h4>Total Pages:{{data.ArticleId.NumberOfPages}}</h4>
+                    <label class="item item-input item-select">
+                    <div class="input-label">
+                        Change Status
+                    </div><!-- statusId[$index] -->
+                    <select ng-model="data.Status" ng-options="Status.Name as Status.Name for Status in status">
+                    </select>
+                </label>
+
+                </div>
+                <div class="item item-body" style="background-color: gainsboro;">
+                    <p>
+                        <button class="button button-block button-balanced" ng-click="Update_Status(data.Id, statusId[$index]) " style="background-color: #0574a0; ">
+                            Submit
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

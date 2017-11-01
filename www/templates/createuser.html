@@ -1,0 +1,105 @@
+<ion-view view-title="Create Account">
+    
+
+        <!-- <ion-nav-buttons side="left">
+             <button class="button button-icon button-clear ion-android-arrow-back" ng-click="logout()">
+            </button> 
+        </ion-nav-buttons> -->
+
+        <ion-content class="background" style="color: #000;" padding="true">
+            <form ng-submit="new_customer()" >
+
+                    <div class="list">
+
+                        <h3>Personal Details</h3>
+                    <div>
+                
+                        <!--<label class="item item-input">
+                            <input type="text" placeholder="User Name" maxlength="20" data-ng-minLength="1" ng-model="user.Data.Username">
+                        </label>-->
+
+                        
+                        <label class="item item-input" >
+                            <input type="text" placeholder="User name" maxlength="30" data-ng-minLength="1" ng-model="user.Data.Username">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="password" placeholder="Password" maxlength="18" data-ng-minLength="6" ng-model="user.Data.Password">
+                        </label>
+                       
+                        <label class="item item-input">
+                            <input type="text" placeholder="First Name" maxlength="30" data-ng-minLength="1" ng-model="user.Data.ContactId.FirstName">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="text" placeholder="Last Name" maxlength="30" data-ng-minLength="1" ng-model="user.Data.ContactId.LastName">
+                        </label>
+
+                        <label class="item item-input">
+                            <ion-label>Birth Date</ion-label>
+                                <input type="date" placeholder="Birth Date" ng-model="user.Data.ContactId.BirthDate">
+                            </ion-item>
+
+                        </label>
+
+                         <label class="item item-input" >
+                            <input type="email" placeholder="Email" maxlength="30" data-ng-minLength="1" ng-model="user.Data.ContactId.Email">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="tel" placeholder="Phone" ng-model="user.Data.ContactId.Phone">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="tel" placeholder="Mobile" ng-model="user.Data.ContactId.Mobile">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="text" placeholder="Street1" maxlength="80" data-ng-minLength="1" ng-model="user.Data.AddressId.Street1"> 
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="text" placeholder="Street2" maxlength="80" data-ng-minLength="1" ng-model="user.Data.AddressId.Street2"> 
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="text" placeholder="City" maxlength="30" data-ng-minLength="1" ng-model="user.Data.AddressId.City">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="text" placeholder="State" maxlength="30" data-ng-minLength="1" ng-model="user.Data.AddressId.State">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="text" placeholder="Country" maxlength="30" data-ng-minLength="1" ng-model="user.Data.AddressId.Country">
+                        </label>
+
+                        <label class="item item-input">
+                            <input type="number" placeholder="PinCode" maxlength="6" data-ng-minLength="6" ng-model="user.Data.AddressId.PinCode">
+                        </label>
+
+                        <label class="item item-input item-select">
+                            <div class="input-label">
+                                User Role
+                            </div>
+                            <select ng-model="user.Data.UserRole.Name">
+                                <option>Master Admin</option> 
+                                <option>Admin</option> 
+                                <option>User</option>
+                            </select>
+                        </label>
+                      
+                        <br/>
+
+</div>
+
+                <center>
+                    <button class="button button-block button-balanced" type="submit" style="background-color: #0574a0; ">
+                        Add Account
+                    </button>
+                </center>
+            </form>
+
+
+    </ion-content>
+</ion-view>

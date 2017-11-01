@@ -1,0 +1,75 @@
+<ion-view view-title="Print Request" ng-init="GetArticle_Category()">
+    <!-- <ion-nav-bar class="bar-stable">
+    </ion-nav-bar> -->
+    <!-- <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_Cdash()">
+              </button> 
+    </ion-nav-buttons> -->
+    <ion-content padding="true">
+        <form ng-submit="JobRequest()">
+            <div>
+
+                <p ng-show>{{Job.Data.Id}}</p>
+                <label class="item item-input item-select">
+                            <div class="input-label">
+                                Category Name
+                            </div>
+                                <select ng-model="Job.Data" ng-options="data.Name for data in category" ng-change="c_id(Job.Data.Name)"> 
+                                </select>
+                </label>
+                <label class="item item-input item-select">
+                            <div class="input-label">
+                                Article Name
+                            </div>
+                                <select ng-model="Job.Article" ng-options="data.Name for data in articlename" ng-change="a_id(Job.Article.Name)">
+                                </select>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                            <span class="input-label">Number of Pages</span>
+                            <p ng-model="Job.Pages">{{Pages}}</p>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                            <span class="input-label">Description</span>
+                            <p ng-model="Job.Description">{{Description}}</p>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                            <span class="input-label">Amount</span>
+                            <p ng-model="Job.Amount">{{Amount}}</p>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                            <span class="input-label">Picture Name</span>
+                            <p ng-model="Job.FileId.Name">{{Imgnm}}</p>
+                </label>
+
+                <!--<br>
+                <a class="button" ng-click="selectPicture1()" style="background-color: #b2b2b2;">Add Attachment</a>
+                <div ng-show="ass1">{{picData0}}</div>
+                <br>
+                <div id="demo1" style="margin-left: 28px;"></div>
+                <br>-->
+
+                <br>
+                <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+                            Print Request
+                </button>
+            </div>
+        </form>
+        <br/>
+        <div class="card">
+                 For Recharge or Payment.
+            </div>
+            <div class="card">
+                 Paytm Number: 9924525388 
+            </div>
+            <div class="card">
+                    Bank detail: ANISH PATEL<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A/c No.: 08450140001695 <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IFSC : KKBK0000845
+
+               </div>
+    </ion-content>
+</ion-view>

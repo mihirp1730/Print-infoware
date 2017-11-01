@@ -1,0 +1,23 @@
+<ion-view view-title="Manage Category" hide-back-button="true" ng-init="GetAllCategory()">
+ 
+     <ion-nav-buttons side="right">
+        <i class="ion-plus" ng-click="add_new_category()" style="float: right; color:blue; width:31px; font-size: 34px;"></i>
+        <!--  <button class="button button-icon ion-ios-bell" ng-controller="AppCtrl" ng-click="a_notification()" style="background: transparent;"></button>
+        --> 
+     </ion-nav-buttons>
+         
+     <ion-content padding="true"  style="color: #000;">
+        <div>
+            <ion-list can-swipe="true">
+                <ion-item ng-repeat="data in category" class="item-thumbnail-left item-text-wrap" style="border-color: transperent; height : 60px;">
+                    <p ng-show="Category_Id">{{data.Id}}</p>
+                    <p style="height:100px">&nbsp;&nbsp;<b>{{data.Name}}</b></p>
+                    <ion-option-button class="button-balanced ion-edit" ng-click="edit_category(data.Id)">
+                    </ion-option-button>
+                    <ion-option-button class="button-assertive ion-trash-a" ng-click="delete_category(data.Id)">
+                    </ion-option-button>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

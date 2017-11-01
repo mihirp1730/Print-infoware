@@ -1,0 +1,60 @@
+<ion-view view-title="Add Article" ng-init="GetCategoryServices()">
+
+    <ion-nav-bar class="bar-stable">
+
+    </ion-nav-bar> 
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_article_list()">
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content padding="true">
+        <form ng-submit="new_Article(Name, Description, Id, Amount, Page)">
+
+            <div class="card">
+                <label class="item item-input" style="background-color: transparent">
+          <input type="text" placeholder="Article Name or Title" maxlength="30" data-ng-minLength="1" ng-model="Name">
+        </label>
+
+                <label class="item item-input item-stacked-label">
+                <span class="input-label">Description</span>
+                <textarea placeholder="Description" rows="2" cols="10" maxlength="120" style="background-color: transparent" data-ng-minLength="1" ng-model="Description">
+                </textarea>
+            </label>
+
+                <label class="item item-input item-select" style="background-color: transparent">
+                <div class="input-label">
+                    Category Name
+                </div>
+                <select ng-model="Article.Data.CategoryId.Id" ng-options="data.Id as data.Name for data in category" style="background-color: transparent">
+                </select>
+            </label>
+
+                <br>
+                &nbsp;&nbsp;&nbsp;<a class="button" ng-click="selectPicture()" style="background-color: #b2b2b2;">Add Attachment</a>
+                <div ng-show="asss">{{picData}}</div>
+                <br>
+                <div id="demo" style="margin-left: 28px;"></div>
+                <br>
+
+                <!--<label class="item item-input" style="background-color: transparent">
+          <input type="text" placeholder="File Name" maxlength="50" data-ng-minLength="1" ng-model="Article.Data.FileName">
+        </label>-->
+
+                <label class="item item-input" style="background-color: transparent">
+          <input type="number" placeholder="Amount" maxlength="10" data-ng-minLength="1" ng-model="Amount">
+        </label>
+
+                <label class="item item-input" style="background-color: transparent">
+          <input type="number" placeholder="Number of Pages" maxlength="10" data-ng-minLength="1" ng-model="Page">
+        </label>
+                <br>
+                <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+  		     Submit
+	       </button>
+            </div>
+
+        </form>
+    </ion-content>
+</ion-view>

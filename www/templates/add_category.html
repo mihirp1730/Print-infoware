@@ -1,0 +1,25 @@
+<ion-view view-title="Add Category">
+
+
+  <ion-nav-bar class="bar-stable">
+  </ion-nav-bar>
+
+          <ion-nav-buttons side="left">
+              <button class="button button-icon button-clear ion-android-arrow-back" ng-click="back_list_category()">
+              </button>
+          </ion-nav-buttons>
+            <ion-content padding="true">
+
+              <form ng-submit="new_category()">
+          
+                    <label class="item item-input">
+                      <input type="text" placeholder="Category Name" maxlength="30" data-ng-minLength="1" ng-model="Category.Data.Name">
+                    </label>
+          
+                    <br>
+                    <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+                      Submit
+                    </button>
+              </form>
+            </ion-content>
+</ion-view>

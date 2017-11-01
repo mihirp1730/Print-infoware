@@ -1,0 +1,46 @@
+<ion-view view-title="Recharge" ng-init="GetAllUsers()">
+
+
+    <!-- <ion-nav-bar class="bar-stable">
+    </ion-nav-bar> -->
+
+    <!-- <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-android-arrow-back" ng-click="Back_Dash()">
+        </button>
+    </ion-nav-buttons> -->
+    <ion-content padding="true">
+        <form ng-submit="New_Recharge(Id, Type, Amount)">
+            <div>
+                <p ng-show="cvv">{{UserId}}</p>
+
+                <label class="item item-input item-select" style="background-color: transparent">
+                    <div class="input-label">
+                        User Name
+                    </div>
+                    
+                    <select ng-model="Id" ng-options="data.FirstName for data in userlist" style="background-color: transparent">
+                    </select>
+                </label>
+
+                <label class="item item-input item-select" style="background-color: transparent">
+                    <div class="input-label">
+                        Recharge Type
+                    </div>
+                    <select ng-model="Type" style="background-color: transparent">
+                        <option>Topup</option>
+                    </select>
+                </label>
+
+                <label class="item item-input" style="background-color: transparent">
+                    <input type="number" placeholder="Amount" maxlength="10" data-ng-minLength="1" ng-model="Amount">
+                </label>
+                    <br>
+                
+                <button class="button button-block button-positive" type="submit" style="background-color: #0074ce;">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<ion-view view-title="Manage Article" ng-init="GetAllArticleCategory()">
+
+    <ion-nav-buttons side="right">
+    </ion-nav-buttons>
+
+    <ion-content padding="true" style="color: #000;">
+        <div>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                   Category Name
+                </div>
+                <select ng-model="artcat.Data" ng-options="data.Name for data in cat_article" ng-change="c_id(artcat.Data.Name)">
+                </select>
+            </label>
+        </div>
+        <div class="table-responsive com-table"> 
+            <table class="table table-bordered table-hover table-striped">  
+                <thead>  
+                    <tr>  
+                        <!-- <th width="5%">Id</th>   -->
+                        <th width="15%">Article Name</th>  
+                        <th width="15%">Description</th>  
+                        <th width="20%">Pages</th>  
+                        <th width="25%">Amount</th>
+                    </tr>  
+                </thead>  
+                <tbody>  
+    
+                    <tr ng-repeat="art in articlename" ng-click="jobreq(Id)">  
+                        <!-- <td width="5%">{{art.Id}}</td>   -->
+                        <td width="15%">{{art.Name}}</td>  
+                        <td width="15%">{{art.Description}}</td>  
+                        <td width="20%">{{art.NumberOfPages}}</td>  
+                        <td width="25%">{{art.Amount}}</td>
+                    </tr>  
+                </tbody>  
+            </table>  
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,56 @@
+<ion-view view-title="Sign-In" hide-nav-bar="true" name="login-view">
+    <ion-content class="abc" padding="true" ng-controller="LoginCtrl" can-swipe-right="false" style="background-size: cover;">
+<br><br>
+        <center>
+            <img src="img/akshar_trans.png" class="logo" style="height: 90px;">
+        </center>
+        <form ng-submit="login_role()">
+            <div>
+                <label class="item-input item-floating-label">
+              <span class="input-label" style="color: #fff; margin-left: -38px;">E-mail</span>
+              <input type="text" name="email" placeholder="E-mail" ng-model="LoginData.Email">
+            </label>
+                <hr>
+
+                <label class="item item-input item-floating-label">
+              <span class="input-label" style="color: #fff; margin-left: -26px;">Password</span>
+            <input type="password" name="password" placeholder="Password" ng-model="LoginData.Password">
+            </label>
+                <hr>
+            </div>
+
+            <br>
+            <center>
+                <button class="button button-block" style="background-color:#0574a0; color: aliceblue; width:98%;" type="submit">
+                  Login
+                </button>
+            </center>
+
+
+        </form>
+        <center>
+            <button class="button button-clear button-light" ng-click="signup()" style="color:#362f2c;">
+                            Need Account?
+                </button>
+        </center>
+        <center>
+            <button class="button button-clear button-light" ng-click="forgot()" style="color:#362f2c;">
+                            Forgot password?
+                </button>
+        </center>
+        <br/>
+
+        <center>
+            <div>
+                <center>
+                    <img src="img/akshar_logo.png" class="logo" style="height: 50px;">
+                </center>
+                <center>
+                    <h5><b>Developed by</b></h5>
+                    <p><b>Akshar Software Solutions</b></p>
+                </center>
+            </div>
+        </center>
+
+    </ion-content>
+</ion-view>
